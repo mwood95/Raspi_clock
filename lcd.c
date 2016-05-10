@@ -11,7 +11,9 @@ int main(void)
 	char id[] = "Michael";
 	fd = wiringPiI2CSetup(0x28);
 	printf("Init result: %d \n", fd);
-	wiringPiI2CWriteReg8(fd, 0xFE, CLEAR);
+	wiringPiI2CWrite(fd, CLEAR);
+	delay(5);
+	wiringPiI2CWriteReg8(fd, 0xFE, 0x33);
 	delay(5);
 //	for(i = 0; i < sizeof(id); i++)
 //	{
