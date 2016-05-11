@@ -7,3 +7,4 @@ clock: clock.c
 
 clean:
 	rm clock
+
